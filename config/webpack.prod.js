@@ -5,6 +5,9 @@ const commonConfig = require('./webpack.common');
 const packageJson = require('../package.json');
 const path = require('path');
 
+require('dotenv').config({ path: path.join(__dirname,'../.env.production') });
+
+
 const prodConfig = {
   mode: 'production',
   output: {
@@ -23,7 +26,7 @@ const prodConfig = {
     }),
     new HtmlWebpackPlugin({
       template: './public/index.html',
-      resourcesUrl: "/resources"
+      resourcesUrl: process.env.RESOURCES_URL
     }),
   ],
 };
