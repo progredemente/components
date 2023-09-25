@@ -22,6 +22,7 @@ const prodConfig = {
       exposes: {
         './Icon': './src/bootstrap',
         './ImageCropperModal': './src/bootstrap',
+        './AppsBar': './src/bootstrap',
         './GIFEncoder': './src/bootstrap'
       },
       shared: packageJson.dependencies

@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import Icon from './Icon';
 import ImageCropperModal from './ImageCropperModal';
+import AppsBar from './AppsBar';
 import { GIFEncoder } from './GIFEncoder';
 
 const icons = {
@@ -65,4 +66,4 @@ if(process.env.NODE_ENV === 'development') {
     }
 }
 
-export { Icon, ImageCropperModal, GIFEncoder }
+export { Icon, ImageCropperModal, AppsBar, GIFEncoder }

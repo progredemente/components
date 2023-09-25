@@ -1,0 +1,110 @@
+.apps-bar-container {
+    --apps-bar-primary-color: black;
+    --apps-bar-secondary-color: gray;
+    --apps-bar-text-primary-color: black;
+    --apps-bar-text-secondary-color: white;
+    --apps-bar-width: 60px;
+    --apps-bar-icon-width: 40px;
+    --apps-bar-padding: calc((var(--apps-bar-width) - var(--apps-bar-icon-width)) / 2);
+    --apps-bar-grow-time: .15s;
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.apps-bar {
+    height: 100%;
+    background-color: var(--apps-bar-secondary-color);
+    width: var(--apps-bar-width);
+    position: absolute;
+    transition: width var(--apps-bar-grow-time) ease-out;
+    overflow-x: hidden;
+}
+
+.apps-bar:hover{
+    width: 300px;
+}
+
+.apps-bar-app {
+    display: flex;
+    align-items: center;
+    padding: calc(var(--apps-bar-padding)/2) var(--apps-bar-padding);
+    font-size: .75em;
+    width: 300px;
+    color: var(--apps-bar-text-primary-color);
+}
+
+.apps-bar-app.current,
+.apps-bar-app:hover{
+    background-color: var(--apps-bar-primary-color);
+    color: var(--apps-bar-text-secondary-color);
+}
+
+.apps-bar-app > img {
+    display: block;
+    width: var(--apps-bar-icon-width);
+    height: var(--apps-bar-icon-width);
+    border-radius: 5px;
+    background-color: white;
+}
+
+.apps-bar-page {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-left: var(--apps-bar-width);
+}
+
+.apps-bar-app > span {
+    margin-left: var(--apps-bar-padding);
+    visibility: hidden;
+    transition: visibility 0;
+}
+
+.apps-bar:hover .apps-bar-app > span {
+    visibility: visible;
+    transition: visibility 0s linear var(--apps-bar-grow-time);
+}
+
+@media all and (max-width: 1000px){
+    .apps-bar-container {
+        flex-direction: column-reverse;
+    }
+    .apps-bar {
+        height: var(--apps-bar-width);
+        width: 100%;
+        position: absolute;
+        transition: none;
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        text-align: center;
+    }
+
+    .apps-bar:hover{
+        width: 100%;
+    }
+
+    .apps-bar-app {
+        display: inline-block;
+        padding: var(--apps-bar-padding) calc(var(--apps-bar-padding)/2);
+        font-size: .75em;
+        color: var(--apps-bar-text-primary-color);
+        width: var(--apps-bar-icon-width);
+        box-sizing: content-box;
+    }
+    
+    .apps-bar-app > img {
+        display: initial;
+    }
+    
+    .apps-bar-page {
+        flex-grow: 1;
+        overflow-y: auto;
+        margin-left: 0;
+        margin-bottom: var(--apps-bar-width);
+    }
+    
+    .apps-bar-app > span {
+        display: none;
+    }
+}
