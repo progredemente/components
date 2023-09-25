@@ -19,6 +19,7 @@
     position: absolute;
     transition: width var(--apps-bar-grow-time) ease-out;
     overflow-x: hidden;
+    z-index: 1;
 }
 
 .apps-bar:hover{
