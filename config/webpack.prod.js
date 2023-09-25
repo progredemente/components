@@ -31,6 +31,9 @@ const prodConfig = {
       template: './public/index.html',
       resourcesUrl: process.env.RESOURCES_URL
     }),
+    new webpack.DefinePlugin({
+      "process.env": JSON.stringify(process.env),
+    }),
   ],
 };
 
