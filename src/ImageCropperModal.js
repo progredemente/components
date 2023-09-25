@@ -45,7 +45,7 @@ class ImageCropperModal extends Component{
           <Cropper
             src={this.props.face.src}
             aspectRatio={1}
-            style={{height: this.props.face.height * Math.min(this.props.face.width, window.innerWidth - 40) / this.props.face.width, width: Math.min(this.props.face.width, window.innerWidth - 40)}}
+            style={{height: Math.min(500, window.innerWidth - 40), width: Math.min(500, window.innerWidth - 40)}}
             zoomable={false}
             ref={this.cropperRef}
           />
