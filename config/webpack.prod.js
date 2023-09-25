@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
 const commonConfig = require('./webpack.common');
 const packageJson = require('../package.json');
+const webpack = require('webpack');
 const path = require('path');
 
 require('dotenv').config({ path: path.join(__dirname,'../.env.production') });
