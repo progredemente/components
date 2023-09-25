@@ -22,7 +22,8 @@ const devConfig = {
       filename: 'remoteEntry.js',
       exposes: {
         './Icon': './src/bootstrap',
-        './ImageCropperModal': './src/bootstrap'
+        './ImageCropperModal': './src/bootstrap',
+        './GIFEncoder': './src/bootstrap'
       },
       shared: packageJson.dependencies
     }),

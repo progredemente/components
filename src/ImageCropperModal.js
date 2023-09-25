@@ -27,7 +27,6 @@ class ImageCropperModal extends Component{
   }
   
   render() {
-    console.log(this.state.showModal)
     return (
       <div
         className={`image-cropper-modal${this.state.showModal ? "": " hidden"}`}
