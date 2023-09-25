@@ -20,7 +20,8 @@ const prodConfig = {
       name: 'components',
       filename: 'remoteEntry.js',
       exposes: {
-        './Icon': './src/bootstrap'
+        './Icon': './src/bootstrap',
+        './ImageCropperModal': './src/bootstrap'
       },
       shared: packageJson.dependencies
     }),
