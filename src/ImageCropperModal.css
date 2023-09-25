@@ -7,7 +7,7 @@
     bottom: 0;
     right: 0;
     left: 0;
-    z-index: 2;
+    z-index: 20;
     background-color: var(--image-cropper-modal-background-shade-color);
     padding: 10px;
     display: flex;
