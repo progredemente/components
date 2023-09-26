@@ -41,6 +41,10 @@ class AppsBar extends Component{
       "d-hondt": {
         img: "d_hondt.png",
         name: "d'Hondt tread on me"
+      },
+      "planchabragas": {
+        img: "planchabragas.png",
+        name: "Plancha Bragas"
       }
     }
   }
