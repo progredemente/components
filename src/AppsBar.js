@@ -62,6 +62,36 @@ class AppsBar extends Component{
               );
             })
           }
+          {
+            Object.keys(this.apps).map((k) => {
+              return (
+                <a key={k} className={`apps-bar-app${this.props.current === k ? ' current' : ''}`} href={`/${k}`}>
+                  <img src={`${process.env.RESOURCES_URL}/${this.apps[k].img}`}/>
+                  <span>{this.apps[k].name}</span>
+                </a>
+              );
+            })
+          }
+          {
+            Object.keys(this.apps).map((k) => {
+              return (
+                <a key={k} className={`apps-bar-app${this.props.current === k ? ' current' : ''}`} href={`/${k}`}>
+                  <img src={`${process.env.RESOURCES_URL}/${this.apps[k].img}`}/>
+                  <span>{this.apps[k].name}</span>
+                </a>
+              );
+            })
+          }
+          {
+            Object.keys(this.apps).map((k) => {
+              return (
+                <a key={k} className={`apps-bar-app${this.props.current === k ? ' current' : ''}`} href={`/${k}`}>
+                  <img src={`${process.env.RESOURCES_URL}/${this.apps[k].img}`}/>
+                  <span>{this.apps[k].name}</span>
+                </a>
+              );
+            })
+          }
         </div>
         <div className='apps-bar-page'>
           {this.props.children}
