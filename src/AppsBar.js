@@ -12,6 +12,10 @@ class AppsBar extends Component{
     return (
       <div className='apps-bar-container'>
         <div className='apps-bar'>
+          <a className='apps-bar-app apps-bar-home' href='/labs'>
+            <img src={`${process.env.RESOURCES_URL}/labs_home.png`}/>
+            <span>progredemente labs</span>
+          </a>
           {
             Object.keys(appList).map((k) => {
               return (
