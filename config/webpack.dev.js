@@ -25,6 +25,7 @@ const devConfig = {
         './Icon': './src/bootstrap',
         './ImageCropperModal': './src/bootstrap',
         './AppsBar': './src/bootstrap',
+        './appList': './src/bootstrap',
         './GIFEncoder': './src/bootstrap'
       },
       shared: packageJson.dependencies
