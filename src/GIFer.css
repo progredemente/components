@@ -14,11 +14,6 @@ html.gifer, .gifer body, .gifer #root {
     font-size: 1.5em;
 }
 
-.gifer a {
-    text-decoration: none;
-    color: var(--gifer-primary-color);
-}
-
 .gifer .prg-button {
     --prg-button-background-color: var(--gifer-secondary-color);
     --prg-button-text-color: black;
@@ -26,6 +21,11 @@ html.gifer, .gifer body, .gifer #root {
 
 .gifer-app {
     height: 100%;
+    color: var(--gifer-primary-color);
+}
+
+.gifer-app a {
+    text-decoration: none;
     color: var(--gifer-primary-color);
 }
 
@@ -98,4 +98,9 @@ html.gifer, .gifer body, .gifer #root {
 .gifer .image-cropper-modal {
     --image-cropper-modal-background-shade-color: var(--gifer-primary-color) !important;  
 
+}
+
+.gifer .apps-bar-container {
+    --apps-bar-primary-color: var(--gifer-primary-color) !important;
+    --apps-bar-secondary-color: var(--gifer-secondary-color) !important;
 }
