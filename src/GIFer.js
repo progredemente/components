@@ -43,7 +43,7 @@ class GIFer extends Component {
         let canvas = document.createElement('canvas');
         canvas.width = this.side * this.scaleFactor;
         canvas.height = this.side * this.scaleFactor;
-        let context = canvas.getContext('2d');
+        let context = canvas.getContext('2d', { willReadFrequently: true });
         encoder.start();
 
         this.props.create(encoder, context, this.img, this.state.crop || this.state.loadedImage, this.scaleFactor, this.side, this.clear.bind(this));
@@ -76,7 +76,12 @@ class GIFer extends Component {
                 loadedImage.src = e.target.result;
                 loadedImage.onload = () => {
                     this.setState({loadedImage}, () => {
-                        this.cropperModalRef.current.showModal();
+                        if(this.cropperModalRef) {
+                            this.cropperModalRef.current.showModal();
+                        }
+                        else {
+                            this.create();
+                        }
                     });
                 }
             });
