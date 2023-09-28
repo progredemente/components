@@ -1,0 +1,101 @@
+.gifer * {
+    font-family: ComicTypo;
+    box-sizing: border-box;
+    --gifer-primary-color: black;
+    --gifer-secondary-color: gray;
+}
+
+html.gifer, .gifer body, .gifer #root {
+  height: 100%;
+}
+
+.gifer body {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.gifer a {
+    text-decoration: none;
+    color: var(--gifer-primary-color);
+}
+
+.gifer .prg-button {
+    --prg-button-background-color: var(--gifer-secondary-color);
+    --prg-button-text-color: black;
+}
+
+.gifer-app {
+    height: 100%;
+    color: var(--gifer-primary-color);
+}
+
+.gifer-gif {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.gifer-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 500px;
+    margin: 10px auto;
+}
+
+.gifer-download {
+    background-color: var(--gifer-primary-color);
+    color: white;
+}
+
+.gifer-buttons > .prg-button {
+    flex: 40%;
+}
+
+
+.gifer-buttons > .prg-button.download {
+    flex: 100%;
+}
+
+.gifer-loading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.gifer-loading > img {
+    width: 200px;
+}
+
+.gifer-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 10px 0;
+    max-width: 350px;
+    color: var(--gifer-secondary-color);
+}
+
+.gifer-title > img {
+    height: 240px;
+    width: 325px;
+    object-position: calc(-1 * var(--gifer-title-start-position) - 1px) -1px;
+    object-fit: none;
+    margin-bottom: 10px;
+}
+
+.gifer-title > div {
+    margin-left: auto;
+    font-size: .75em;
+}
+
+.gifer .image-cropper-modal {
+    --image-cropper-modal-background-shade-color: var(--gifer-primary-color) !important;  
+
+}

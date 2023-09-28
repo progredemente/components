@@ -24,6 +24,7 @@ const prodConfig = {
         './Icon': './src/bootstrap',
         './ImageCropperModal': './src/bootstrap',
         './AppsBar': './src/bootstrap',
+        './GIFer': './src/bootstrap',
         './appList': './src/bootstrap',
         './GIFEncoder': './src/bootstrap'
       },

@@ -5,6 +5,7 @@ import Icon from './Icon';
 import ImageCropperModal from './ImageCropperModal';
 import AppsBar from './AppsBar';
 import { GIFEncoder } from './GIFEncoder';
+import GIFer from './GIFer';
 import appList from './appList';
 
 const icons = {
@@ -67,4 +68,4 @@ if(process.env.NODE_ENV === 'development') {
     }
 }
 
-export { Icon, ImageCropperModal, AppsBar, appList, GIFEncoder }
+export { Icon, ImageCropperModal, AppsBar, GIFer, appList, GIFEncoder }

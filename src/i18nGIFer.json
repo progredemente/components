@@ -1,0 +1,17 @@
+{
+    "es": {
+        "loading": "Cargando",
+        "by": "por",
+        "loadButtonText": "Cargar imagen",
+        "editButtonText": "Editar imagen",
+        "downloadButtonText": "Descargar"
+    },
+    "en": {
+        "loading": "Loading",
+        "by": "by",
+        "loadButtonText": "Load image",
+        "editButtonText": "Edit image",
+        "downloadButtonText": "Download"
+    }
+
+}

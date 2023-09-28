@@ -43,7 +43,7 @@ class ImageCropperModal extends Component{
         >
           <div className="image-cropper-modal-title">Recortar imagen</div>
           <Cropper
-            src={this.props.face.src}
+            src={this.props.image.src}
             aspectRatio={1}
             style={{height: Math.min(500, window.innerWidth - 40), width: Math.min(500, window.innerWidth - 40)}}
             zoomable={false}
