@@ -22,6 +22,7 @@ class GIFer extends Component {
         this.scaleFactor = .25;
         this.side = 1500;
         this.img = null;
+        this.defaultImg = null;
         this.cropperModalRef = this.props.withCropper ? createRef() : null;
     }
 
@@ -29,8 +30,18 @@ class GIFer extends Component {
         this.img = new Image();
         this.img.src = this.props.sourceImageUrl;
         this.img.onload = () => {
-            this.setState({loaded: true});
-            this.create();
+            if(this.props.defaultImgs) {
+                this.defaultImg = new Image();
+                this.defaultImg.src = this.props.defaultImgs[Math.floor(Math.random() * this.props.defaultImgs.length)];
+                this.defaultImg.onload = () => {
+                    this.setState({loaded: true});
+                    this.create();
+                }
+            }
+            else {
+                this.setState({loaded: true});
+                this.create();
+            }
         }
     }
 
@@ -46,7 +57,7 @@ class GIFer extends Component {
         let context = canvas.getContext('2d', { willReadFrequently: true });
         encoder.start();
 
-        this.props.create(encoder, context, this.img, this.state.crop || this.state.loadedImage, this.scaleFactor, this.side, this.clear.bind(this));
+        this.props.create(encoder, context, this.img, this.state.crop || this.state.loadedImage || this.defaultImg, this.scaleFactor, this.side, this.clear.bind(this));
         
         encoder.finish();
         let binaryGif = encoder.stream().getData();
