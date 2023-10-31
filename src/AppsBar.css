@@ -157,4 +157,9 @@
     .apps-bar-app > span {
         display: none;
     }
+
+    .apps-bar-home > img{
+        filter: drop-shadow(var(--apps-bar-primary-color) 0px calc(var(--apps-bar-icon-width) * -2));
+        transform: translateY(calc(2 * var(--apps-bar-icon-width)));
+    }
 }

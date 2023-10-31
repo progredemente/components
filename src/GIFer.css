@@ -1,6 +1,5 @@
 .gifer * {
     font-family: ComicTypo;
-    box-sizing: border-box;
     --gifer-primary-color: black;
     --gifer-secondary-color: gray;
 }
@@ -22,6 +21,10 @@ html.gifer, .gifer body, .gifer #root {
 .gifer-app {
     height: 100%;
     color: var(--gifer-primary-color);
+}
+
+.gifer-app * {
+    box-sizing: border-box;
 }
 
 .gifer-app a {
