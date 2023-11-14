@@ -46,6 +46,11 @@ const appList = {
     img: "planchabragas.png",
     name: "Plancha Bragas",
     type: "gif"
+  },
+  "esquizobanderas": {
+    img: "esquizobanderas.png",
+    name: "Esquizobanderas",
+    type: "image"
   }
 }
 
