@@ -4,6 +4,7 @@ import './index.css';
 import Icon from './Icon';
 import ImageCropperModal from './ImageCropperModal';
 import AppsBar from './AppsBar';
+import appsBarForVue from './appsBarForVue';
 import { GIFEncoder } from './GIFEncoder';
 import GIFer from './GIFer';
 import appList from './appList';
@@ -68,4 +69,4 @@ if(process.env.NODE_ENV === 'development') {
     }
 }
 
-export { Icon, ImageCropperModal, AppsBar, GIFer, appList, GIFEncoder }
+export { Icon, ImageCropperModal, AppsBar, GIFer, appList, GIFEncoder, appsBarForVue }
