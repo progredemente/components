@@ -51,6 +51,11 @@ const appList = {
     img: "esquizobanderas.png",
     name: "Esquizobanderas",
     type: "image"
+  },
+  "jso": {
+    img: "jso.png",
+    name: lang === "es" ? "[EN CONSTRUCCIÓN]" : "[UNDER CONSTRUCTION]",
+    type: "other"
   }
 }
 
