@@ -11,6 +11,7 @@ export default () => {
         console.log(fontUrl);
         const font = new FontFace("ComicTypo", `url(${fontUrl})`);
         self.fonts.add(font);
+        debugger;
         font.load().then(() => {
             const encoder = GIFEncoder();
             encoder.start();
