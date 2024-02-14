@@ -54,7 +54,6 @@ class GIFer extends Component {
             Test,
             ...(this.props.deps || []),
             this.props.create,
-            Test,
             `(${createGif.toString()})()`
         ].map(f => f.toString()).join("\n");
         const createGifCode = new Blob([`(() => {${functions}})()`]);
