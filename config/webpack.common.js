@@ -4,22 +4,6 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /GIFEncoder\.js$/,
-        use: {
-          loader: 'script-loader',
-          options: {
-            plugins: [
-              new TerserPlugin({
-                terserOptions: {
-                  keep_fnames: true,
-                  keep_classnames: true
-                }
-              })
-            ]
-          }
-        }
-      },
-      {
         test: /\.m?js$/,
         exclude: /node_modules/,
         use: {
@@ -42,7 +26,7 @@ module.exports = {
       new TerserPlugin({
         terserOptions: {
           keep_fnames: true,
-          keep_classnames: true
+          keep_classnames: /^.*GIFencoder.*$/
         }
       })
     ]
