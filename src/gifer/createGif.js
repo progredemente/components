@@ -8,7 +8,7 @@ export default () => {
             scaleFactor,
             fontUrl
         } = ev.data;
-        const font = new FontFace("ComicTypo", `url(https://progredemente.com${fontUrl})`);
+        const font = new FontFace("ComicTypo", `url(${fontUrl})`);
         self.fonts.add(font);
         font.load().then(() => {
             const encoder = new GIFEncoder();
