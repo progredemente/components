@@ -1,7 +1,7 @@
 import React, { Component, createRef } from 'react';
 import './GIFer.css';
-import { LZWEncoder, NeuQuant, GIFEncoder } from './GIFEncoder';
-import createGif, { Test } from './createGif';
+import { LZWEncoder, NeuQuant, Test } from './GIFEncoder';
+import createGif from './createGif';
 import Icon from '../icon/Icon';
 import ImageCropperModal from '../image-cropper-modal/ImageCropperModal';
 import i18n from './i18nGIFer.json';

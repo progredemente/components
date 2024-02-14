@@ -28,7 +28,3 @@ export default () => {
         })
     })
 }
-
-export class Test {
-    
-}
