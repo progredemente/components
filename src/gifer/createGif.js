@@ -11,7 +11,7 @@ export default () => {
         const font = new FontFace("ComicTypo", `url(${fontUrl})`);
         self.fonts.add(font);
         font.load().then(() => {
-            const encoder = new Test();
+            const encoder = new GIFEncoder();
             encoder.start();
             const canvas = new OffscreenCanvas(side * scaleFactor, side * scaleFactor);
             const context = canvas.getContext('2d', { willReadFrequently: true });

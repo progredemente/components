@@ -815,7 +815,7 @@ export function NeuQuant() {
  * @version 0.1 AS3 implementation
  */
 
-export class Test {
+export class GIFEncoder {
 
 	constructor() {
 

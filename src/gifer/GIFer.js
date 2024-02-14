@@ -1,6 +1,6 @@
 import React, { Component, createRef } from 'react';
 import './GIFer.css';
-import { LZWEncoder, NeuQuant, Test } from './GIFEncoder';
+import { LZWEncoder, NeuQuant, GIFEncoder } from './GIFEncoder';
 import createGif from './createGif';
 import Icon from '../icon/Icon';
 import ImageCropperModal from '../image-cropper-modal/ImageCropperModal';
@@ -49,9 +49,9 @@ class GIFer extends Component {
 
     initWorker(){
         const functions = [
+            GIFEncoder,
             LZWEncoder,
             NeuQuant,
-            Test,
             ...(this.props.deps || []),
             this.props.create,
             `(${createGif.toString()})()`
