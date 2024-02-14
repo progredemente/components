@@ -25,7 +25,7 @@ module.exports = {
     minimizer: [
       new TerserPlugin({
         terserOptions: {
-          keep_fnames: true
+          exclude: '../src/gifer/createGif.js'
         }
       })
     ]
