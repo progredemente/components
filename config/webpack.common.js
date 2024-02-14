@@ -27,7 +27,9 @@ module.exports = {
         terserOptions: {
           keep_fnames: true,
           keep_classnames: true,
-          mangle: false
+          mangle: {
+            reserved: ['GIFEncoder']
+          }
         }
       })
     ]
