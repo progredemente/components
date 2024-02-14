@@ -1,4 +1,4 @@
-export function createGif() {
+export default () => {
     self.addEventListener('message', (ev) => {
         if (!ev) return;
         const {

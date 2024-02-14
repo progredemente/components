@@ -1,7 +1,7 @@
 import React, { Component, createRef } from 'react';
 import './GIFer.css';
 import { LZWEncoder, NeuQuant, GIFEncoder } from './GIFEncoder';
-import { createGif } from './createGif';
+import createGif from './createGif';
 import Icon from '../icon/Icon';
 import ImageCropperModal from '../image-cropper-modal/ImageCropperModal';
 import i18n from './i18nGIFer.json';
@@ -49,14 +49,14 @@ class GIFer extends Component {
 
     initWorker(){
         const functions = [
-            LZWEncoder.toString(),
-            NeuQuant.toString(),
-            GIFEncoder.toString(),
+            LZWEncoder,
+            NeuQuant,
+            GIFEncoder,
             ...(this.props.deps || []),
             this.props.create,
-            createGif
-        ].join("\n");
-        const createGifCode = new Blob([`(() => {${functions}\ncreateGif()})()`]);
+            `(${createGif.toString()})()`
+        ].map(f => f.toString()).join("\n");
+        const createGifCode = new Blob([`(() => {${functions}})()`]);
         this.worker = new Worker(URL.createObjectURL(createGifCode));
         this.worker.addEventListener('message',(ev) => {
             this.setState({ gif: ev.data, pageLoaded: true, imageProcessing: false });
