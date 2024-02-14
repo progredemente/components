@@ -26,9 +26,7 @@ module.exports = {
       new TerserPlugin({
         terserOptions: {
           keep_fnames: true,
-          compress: {
-            drop_debugger: false
-          }
+          keep_classnames: true
         }
       })
     ]

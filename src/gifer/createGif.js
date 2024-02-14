@@ -8,12 +8,10 @@ export default () => {
             scaleFactor,
             fontUrl
         } = ev.data;
-        console.log(fontUrl);
         const font = new FontFace("ComicTypo", `url(https://progredemente.com${fontUrl})`);
         self.fonts.add(font);
-        debugger;
         font.load().then(() => {
-            const encoder = GIFEncoder();
+            const encoder = new GIFEncoder();
             encoder.start();
             const canvas = new OffscreenCanvas(side * scaleFactor, side * scaleFactor);
             const context = canvas.getContext('2d', { willReadFrequently: true });
@@ -26,7 +24,7 @@ export default () => {
             const binaryGif = encoder.stream().getData();
             postMessage(`data:image/gif;base64,${btoa(binaryGif)}`);
         }).catch((e) => {
-            console.log(e, font)
+            console.log(e)
         })
     })
 }
