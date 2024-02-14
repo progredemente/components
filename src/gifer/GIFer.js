@@ -49,9 +49,9 @@ class GIFer extends Component {
 
     initWorker(){
         const functions = [
-            GIFEncoder,
             LZWEncoder,
             NeuQuant,
+            GIFEncoder,
             ...(this.props.deps || []),
             this.props.create,
             `(${createGif.toString()})()`

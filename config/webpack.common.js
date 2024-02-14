@@ -10,7 +10,15 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: ['@babel/preset-react', '@babel/preset-env'],
-            plugins: ['@babel/plugin-transform-runtime'],
+            plugins: [
+              '@babel/plugin-transform-runtime',
+              new TerserPlugin({
+                terserOptions: {
+                  keep_fnames: true,
+                  keep_classnames: true
+                }
+              })
+            ],
           },
         },
       },
