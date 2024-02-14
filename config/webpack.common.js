@@ -26,7 +26,7 @@ module.exports = {
       new TerserPlugin({
         terserOptions: {
           keep_fnames: true,
-          keep_classnames: /GIFEncoder/
+          keep_classnames: true
         }
       })
     ]
