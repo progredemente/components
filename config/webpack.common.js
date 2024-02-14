@@ -4,7 +4,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /createGif\.js$/,
+        test: /GIFEncoder\.js$/,
         use: {
           loader: 'script-loader',
           options: {
