@@ -8,6 +8,7 @@ export default () => {
             scaleFactor,
             fontUrl
         } = ev.data;
+        console.log(fontUrl);
         const font = new FontFace("ComicTypo", `url(${fontUrl})`);
         self.fonts.add(font);
         font.load().then(() => {
