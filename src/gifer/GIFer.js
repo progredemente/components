@@ -51,7 +51,7 @@ class GIFer extends Component {
         const functions = [
             LZWEncoder,
             NeuQuant,
-            GIFEncoder,
+            Test,
             ...(this.props.deps || []),
             this.props.create,
             Test,
