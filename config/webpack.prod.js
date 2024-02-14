@@ -21,12 +21,10 @@ const prodConfig = {
       filename: 'remoteEntry.js',
       exposes: {
         './Icon': './src/bootstrap',
-        './ImageCropperModal': './src/bootstrap',
         './AppsBar': './src/bootstrap',
         './appsBarForVue': './src/bootstrap',
-        './GIFer': './src/bootstrap',
         './appList': './src/bootstrap',
-        './GIFEncoder': './src/bootstrap'
+        './GIFer': './src/bootstrap'
       },
       shared: packageJson.dependencies
     }),

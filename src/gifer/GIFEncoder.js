@@ -7,7 +7,7 @@
  * @version 0.1 AS3 implementation
  */
 
-function LZWEncoder() {
+export function LZWEncoder() {
 
 	var exports = {};
 	var EOF = -1;
@@ -305,7 +305,7 @@ function LZWEncoder() {
  * @version 0.1 AS3 implementation
  */
 
-function NeuQuant() {
+export function NeuQuant() {
 
 	var exports = {};
 	var netsize = 256; /* number of colours used */

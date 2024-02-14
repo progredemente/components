@@ -98,6 +98,36 @@ html.gifer, .gifer body, .gifer #root {
     font-size: .75em;
 }
 
+.gifer-processing {
+    width: var(--gif-side);
+    height: var(--gif-side);
+    background-color: var(--gifer-secondary-color);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gifer-processing::before {
+    content: '';
+    display: block;
+    border: 10px solid var(--gifer-primary-color);
+    width: 50px;
+    height: 50px;
+    border-radius: 70px;
+    border-bottom: 10px solid var(--gifer-secondary-color);
+    animation: spin 1s infinite ease-in-out;
+}
+
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
 .gifer .image-cropper-modal {
     --image-cropper-modal-background-shade-color: var(--gifer-primary-color) !important;  
 

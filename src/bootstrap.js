@@ -1,13 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Icon from './Icon';
-import ImageCropperModal from './ImageCropperModal';
-import AppsBar from './AppsBar';
-import appsBarForVue from './appsBarForVue';
-import { GIFEncoder } from './GIFEncoder';
-import GIFer from './GIFer';
-import appList from './appList';
+import Icon from './icon/Icon';
+import AppsBar from './apps-bar/AppsBar';
+import appsBarForVue from './apps-bar/appsBarForVue';
+import GIFer from './gifer/GIFer';
+import appList from './apps-bar/appList';
 
 const icons = {
     "0x43": 'C',
@@ -69,4 +67,4 @@ if(process.env.NODE_ENV === 'development') {
     }
 }
 
-export { Icon, ImageCropperModal, AppsBar, GIFer, appList, GIFEncoder, appsBarForVue }
+export { Icon, AppsBar, appsBarForVue, appList, GIFer }
