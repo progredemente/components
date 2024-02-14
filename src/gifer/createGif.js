@@ -25,7 +25,7 @@ export default () => {
             const binaryGif = encoder.stream().getData();
             postMessage(`data:image/gif;base64,${btoa(binaryGif)}`);
         }).catch((e) => {
-            console.log(e)
+            console.log(e, font)
         })
     })
 }
