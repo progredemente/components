@@ -9,7 +9,7 @@ export default () => {
             fontUrl
         } = ev.data;
         console.log(fontUrl);
-        const font = new FontFace("ComicTypo", `url(${fontUrl})`);
+        const font = new FontFace("ComicTypo", `url(https://progredemente.com${fontUrl})`);
         self.fonts.add(font);
         debugger;
         font.load().then(() => {
