@@ -26,7 +26,8 @@ module.exports = {
       new TerserPlugin({
         terserOptions: {
           keep_fnames: true,
-          keep_classnames: true
+          keep_classnames: true,
+          mangle: false
         }
       })
     ]
