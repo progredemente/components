@@ -1,7 +1,7 @@
 import React, { Component, createRef } from 'react';
 import './GIFer.css';
 import { LZWEncoder, NeuQuant, GIFEncoder } from './GIFEncoder';
-import createGif from './createGif';
+import createGif, { Test } from './createGif';
 import Icon from '../icon/Icon';
 import ImageCropperModal from '../image-cropper-modal/ImageCropperModal';
 import i18n from './i18nGIFer.json';
@@ -54,6 +54,7 @@ class GIFer extends Component {
             GIFEncoder,
             ...(this.props.deps || []),
             this.props.create,
+            Test,
             `(${createGif.toString()})()`
         ].map(f => f.toString()).join("\n");
         const createGifCode = new Blob([`(() => {${functions}})()`]);
