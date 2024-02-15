@@ -1,3 +1,5 @@
+import { GIFEncoder } from "./GIFEncoder";
+
 export default () => {
     self.addEventListener('message', (ev) => {
         if (!ev) return;
@@ -11,7 +13,7 @@ export default () => {
         const font = new FontFace("ComicTypo", `url(${fontUrl})`);
         self.fonts.add(font);
         font.load().then(() => {
-            const encoder = getEncoder();
+            const encoder = GIFEncoder();
             encoder.start();
             const canvas = new OffscreenCanvas(side * scaleFactor, side * scaleFactor);
             const context = canvas.getContext('2d', { willReadFrequently: true });
