@@ -1368,3 +1368,7 @@ export class GIFEncoder {
 
 
 };
+
+export function getEncoder() {
+	return new GIFEncoder();
+}
