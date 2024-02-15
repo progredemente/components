@@ -28,7 +28,7 @@ module.exports = {
           keep_fnames: true,
           keep_classnames: true,
           mangle: {
-            reserved: ['GIFEncoder']
+            keep_classnames: true
           }
         }
       })
