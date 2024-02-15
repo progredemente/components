@@ -1,4 +1,3 @@
-const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
   module: {
@@ -19,15 +18,5 @@ module.exports = {
         use: ["style-loader", "css-loader"],
       }
     ],
-  },
-  optimization: {
-    minimize: true,
-    minimizer: [
-      new TerserPlugin({
-        terserOptions: {
-          keep_fnames: true
-        }
-      })
-    ]
   }
 };
