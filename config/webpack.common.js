@@ -9,7 +9,7 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-react', '@babel/preset-env', { "exclude": ["transform-function-name", "transform-classes"] }],
+            presets: ['@babel/preset-react', '@babel/preset-env'],
             plugins: ['@babel/plugin-transform-runtime'],
           },
         },
