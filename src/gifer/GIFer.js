@@ -130,7 +130,9 @@ class GIFer extends Component {
                     !this.state.pageLoaded &&
                     <div className="gifer-loading">
                         <img src={this.props.loadingImageUrl} alt={this.i18n.loading} />
-                        {this.i18n.loading}
+                        <span className="gifer-loading-text">
+                            {this.i18n.loading}
+                        </span>
                     </div>
                 }
                 {
