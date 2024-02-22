@@ -22,7 +22,8 @@ export default () => {
                 context.fillStyle = "white";
                 context.fillRect(0, 0, side * scaleFactor, side * scaleFactor)
             });
-    
+
+            encoder.finish();
             const binaryGif = encoder.stream().getData();
             postMessage(`data:image/gif;base64,${btoa(binaryGif)}`);
         }).catch((e) => {
