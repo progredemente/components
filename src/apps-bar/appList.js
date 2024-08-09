@@ -51,6 +51,11 @@ const appList = {
     img: "esquizobanderas.png",
     name: "Esquizobanderas",
     type: "image"
+  },
+  "coptcha": {
+    img: "coptcha.png",
+    name: "COPTCHA",
+    type: "other"
   }
 }
 
