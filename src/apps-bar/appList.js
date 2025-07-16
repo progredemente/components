@@ -2,7 +2,7 @@ let lang;
 try{
   lang = navigator.language.toLowerCase().split('-')[0];
 } catch(_){}
-if(!['en', 'es'].includes(lang)){
+if(!['en', 'es', 'pt'].includes(lang)){
   lang = 'en';
 }
 
@@ -27,9 +27,9 @@ const appList = {
     name: "Camaleón",
     type: "gif"
   },
-  "calor": {
+  "chromatic": {
     img: "calor.png",
-    name: "¡Calor!",
+    name: lang === "es" ? "Cambio cromático" : lang === "pt" ? "Mudança cromática" : "Chromatic change",
     type: "other"
   },
   "buon-appetito": {
