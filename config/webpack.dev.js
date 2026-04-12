@@ -28,7 +28,17 @@ const devConfig = {
         './appList': './src/bootstrap',
         './GIFer': './src/bootstrap'
       },
-      shared: packageJson.dependencies
+      shared: {
+        ...packageJson.dependencies,
+        react: {
+          singleton: true,
+          requiredVersion: packageJson.dependencies.react,
+        },
+        'react-dom': {
+          singleton: true,
+          requiredVersion: packageJson.dependencies['react-dom'],
+        },
+      }
     }),
     new HtmlWebpackPlugin({
       template: './public/index.html',
