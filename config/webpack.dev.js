@@ -16,6 +16,9 @@ const devConfig = {
     historyApiFallback: {
       index: 'index.html',
     },
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+    },
   },
   plugins: [
     new ModuleFederationPlugin({
@@ -41,8 +44,13 @@ const devConfig = {
       }
     }),
     new HtmlWebpackPlugin({
-      template: './public/index.html',
-      resourcesUrl: process.env.RESOURCES_URL
+      template: './public/index.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './public/fonts.css',
+      filename: 'fonts.css',
+      mediaUrl: process.env.MEDIA_URL,
+      inject: false
     }),
     new webpack.DefinePlugin({
       "process.env": JSON.stringify(process.env),

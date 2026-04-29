@@ -14,6 +14,7 @@ module.exports = {
       },
       {
         test: /\.css$/i,
+        exclude: /fonts\.css$/,
         use: ["style-loader", "css-loader"],
       }
     ],

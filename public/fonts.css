@@ -1,0 +1,16 @@
+@font-face {
+  font-family: ComicTypo;
+  src: url('<%= htmlWebpackPlugin.options.mediaUrl%>/resources/fonts/comic_typo.ttf');
+}
+
+@font-face {
+  font-family: ComicIcons;
+  src: url('<%= htmlWebpackPlugin.options.mediaUrl%>/resources/fonts/comic_icons.ttf');
+}
+
+@font-face {
+  font-family: ComicTypoJap;
+  src: url('<%= htmlWebpackPlugin.options.mediaUrl%>/resources/fonts/comic_typo_jap.ttf');
+}
+
+

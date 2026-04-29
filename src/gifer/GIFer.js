@@ -81,7 +81,7 @@ class GIFer extends Component {
                 customImage,
                 side: this.side,
                 scaleFactor: this.scaleFactor,
-                fontUrl: `${process.env.RESOURCES_URL}/comic_typo.ttf`
+                fontUrl: `${process.env.MEDIA_URL}/resources/fonts/comic_typo.ttf`
             })
         })
     }
