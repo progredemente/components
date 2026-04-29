@@ -143,7 +143,7 @@ class GIFer extends Component {
                                 src={this.props.sourceImageUrl}
                                 alt={this.props.title}
                             />
-                            <div>{this.i18n.by} <a href="/" target="_blank">progredemente</a></div>
+                            <div>{this.i18n.by} <a href="https://progredemente.com" target="_blank">progredemente</a></div>
                         </div>
                         {
                             this.state.imageProcessing &&
