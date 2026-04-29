@@ -23,14 +23,14 @@ class AppsBar extends Component{
     return (
       <div className='apps-bar-container'>
         <div className='apps-bar' ref={this.ref}>
-          <a className='apps-bar-app apps-bar-home' href='/labs'>
+          <a className='apps-bar-app apps-bar-home' href='https://labs.progredemente.com'>
             <img src={`${process.env.MEDIA_URL}/resources/logos/labs_home.png`}/>
             <span>progredemente labs</span>
           </a>
           {
             Object.keys(appList).map((k) => {
               return (
-                <a key={k} className={`apps-bar-app${this.props.current === k ? ' current' : ''}`} href={`/${k}`}>
+                <a key={k} className={`apps-bar-app${this.props.current === k ? ' current' : ''}`} href={`https://${k}.progredemente.com`}>
                   <img src={`${process.env.MEDIA_URL}/resources/logos/${appList[k].img}`}/>
                   <span>{appList[k].name}</span>
                 </a>
